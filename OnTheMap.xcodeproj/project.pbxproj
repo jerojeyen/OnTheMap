@@ -7,12 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D3168611B4A7FCF00632A66 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D3168601B4A7FCF00632A66 /* LoginViewController.swift */; };
 		0D5855131B467F39000457FF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D5855121B467F39000457FF /* AppDelegate.swift */; };
-		0D5855151B467F39000457FF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D5855141B467F39000457FF /* ViewController.swift */; };
 		0D5855181B467F39000457FF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D5855161B467F39000457FF /* Main.storyboard */; };
 		0D58551A1B467F39000457FF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0D5855191B467F39000457FF /* Images.xcassets */; };
 		0D58551D1B467F39000457FF /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D58551B1B467F39000457FF /* LaunchScreen.xib */; };
 		0D5855291B467F39000457FF /* OnTheMapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D5855281B467F39000457FF /* OnTheMapTests.swift */; };
+		0D5855371B468DC1000457FF /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0D5855341B468DC1000457FF /* Roboto-Medium.ttf */; };
+		0D5855381B468DC1000457FF /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0D5855351B468DC1000457FF /* Roboto-Regular.ttf */; };
+		0D5855391B468DC1000457FF /* Roboto-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0D5855361B468DC1000457FF /* Roboto-Thin.ttf */; };
+		0D58553C1B469AA7000457FF /* FormTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D58553B1B469AA7000457FF /* FormTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,16 +30,20 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0D3168601B4A7FCF00632A66 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		0D58550D1B467F39000457FF /* OnTheMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OnTheMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D5855111B467F39000457FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0D5855121B467F39000457FF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0D5855141B467F39000457FF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		0D5855171B467F39000457FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0D5855191B467F39000457FF /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		0D58551C1B467F39000457FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		0D5855221B467F39000457FF /* OnTheMapTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OnTheMapTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D5855271B467F39000457FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0D5855281B467F39000457FF /* OnTheMapTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnTheMapTests.swift; sourceTree = "<group>"; };
+		0D5855341B468DC1000457FF /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
+		0D5855351B468DC1000457FF /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
+		0D5855361B468DC1000457FF /* Roboto-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Thin.ttf"; sourceTree = "<group>"; };
+		0D58553B1B469AA7000457FF /* FormTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +64,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0D31685F1B4A7F8D00632A66 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				0D3168601B4A7FCF00632A66 /* LoginViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
 		0D5855041B467F39000457FF = {
 			isa = PBXGroup;
 			children = (
@@ -77,11 +93,9 @@
 		0D58550F1B467F39000457FF /* OnTheMap */ = {
 			isa = PBXGroup;
 			children = (
+				0D31685F1B4A7F8D00632A66 /* Controllers */,
+				0D58553A1B469A81000457FF /* UI */,
 				0D5855121B467F39000457FF /* AppDelegate.swift */,
-				0D5855141B467F39000457FF /* ViewController.swift */,
-				0D5855161B467F39000457FF /* Main.storyboard */,
-				0D5855191B467F39000457FF /* Images.xcassets */,
-				0D58551B1B467F39000457FF /* LaunchScreen.xib */,
 				0D5855101B467F39000457FF /* Supporting Files */,
 			);
 			path = OnTheMap;
@@ -90,6 +104,10 @@
 		0D5855101B467F39000457FF /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				0D5855321B468D5F000457FF /* Resources */,
+				0D5855161B467F39000457FF /* Main.storyboard */,
+				0D5855191B467F39000457FF /* Images.xcassets */,
+				0D58551B1B467F39000457FF /* LaunchScreen.xib */,
 				0D5855111B467F39000457FF /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -110,6 +128,32 @@
 				0D5855271B467F39000457FF /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0D5855321B468D5F000457FF /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				0D5855331B468D9C000457FF /* Fonts */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		0D5855331B468D9C000457FF /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				0D5855341B468DC1000457FF /* Roboto-Medium.ttf */,
+				0D5855351B468DC1000457FF /* Roboto-Regular.ttf */,
+				0D5855361B468DC1000457FF /* Roboto-Thin.ttf */,
+			);
+			name = Fonts;
+			sourceTree = "<group>";
+		};
+		0D58553A1B469A81000457FF /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				0D58553B1B469AA7000457FF /* FormTextField.swift */,
+			);
+			name = UI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -161,6 +205,7 @@
 				TargetAttributes = {
 					0D58550C1B467F39000457FF = {
 						CreatedOnToolsVersion = 6.4;
+						DevelopmentTeam = K89BVC8GF7;
 					};
 					0D5855211B467F39000457FF = {
 						CreatedOnToolsVersion = 6.4;
@@ -192,7 +237,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D5855371B468DC1000457FF /* Roboto-Medium.ttf in Resources */,
 				0D5855181B467F39000457FF /* Main.storyboard in Resources */,
+				0D5855391B468DC1000457FF /* Roboto-Thin.ttf in Resources */,
+				0D5855381B468DC1000457FF /* Roboto-Regular.ttf in Resources */,
 				0D58551D1B467F39000457FF /* LaunchScreen.xib in Resources */,
 				0D58551A1B467F39000457FF /* Images.xcassets in Resources */,
 			);
@@ -212,7 +260,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0D5855151B467F39000457FF /* ViewController.swift in Sources */,
+				0D3168611B4A7FCF00632A66 /* LoginViewController.swift in Sources */,
+				0D58553C1B469AA7000457FF /* FormTextField.swift in Sources */,
 				0D5855131B467F39000457FF /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -340,9 +389,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "";
 				INFOPLIST_FILE = OnTheMap/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "733bcfe7-dc99-4a8b-bc32-236f13d4c54d";
 			};
 			name = Debug;
 		};
@@ -350,9 +402,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "";
 				INFOPLIST_FILE = OnTheMap/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "733bcfe7-dc99-4a8b-bc32-236f13d4c54d";
 			};
 			name = Release;
 		};
@@ -409,6 +464,7 @@
 				0D58552E1B467F39000457FF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0D58552F1B467F39000457FF /* Build configuration list for PBXNativeTarget "OnTheMapTests" */ = {
 			isa = XCConfigurationList;
@@ -417,6 +473,7 @@
 				0D5855311B467F39000457FF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
