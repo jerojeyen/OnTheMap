@@ -11,7 +11,7 @@ import Foundation
 class ParseClient {
     
     /* Shared session */
-    var session: NSURLSession
+    let session: NSURLSession
     
     init() {
         self.session = NSURLSession.sharedSession()
@@ -20,7 +20,7 @@ class ParseClient {
     func getStudents(completionHandler: (success: Bool, students: [Student]?, error: String?) -> Void) {
         /* Setting the parameters */
         let methodParameters = [
-            "limit": 300
+            "limit": 100
         ]
         
         /* Configuring the request */

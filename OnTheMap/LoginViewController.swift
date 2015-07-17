@@ -29,7 +29,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         self.subscribeToKeyboardNotifications()
         
         usernameTextField.text = "jerozan.jeyendrarasa@careerbuilder.com"
-        passwordTextField.text = ""
+        passwordTextField.text = "Apple2015"
         
     }
     

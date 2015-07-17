@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 import MapKit
 
-class MapViewController: UIViewController {
+class MapViewController: UIViewController, MKMapViewDelegate {
     
     @IBOutlet weak var mapView: MKMapView!
     var students = [Student]()
@@ -20,26 +20,43 @@ class MapViewController: UIViewController {
         
         //Adding the bar button items of the navigation bar.
         let addLocationButton = UIBarButtonItem(image: UIImage(named: "pin"), style: UIBarButtonItemStyle.Plain, target: self, action: "checkForStudentLocation")
-        let refreshButton = UIBarButtonItem(barButtonSystemItem: .Refresh, target: self, action: "getStudentsList")
+        let refreshButton = UIBarButtonItem(barButtonSystemItem: .Refresh, target: self, action: "loadStudents")
         let logoutButton = UIBarButtonItem(title: "Logout", style: .Plain, target: self, action: "logout")
         
         self.navigationItem.leftBarButtonItem = logoutButton
         self.navigationItem.rightBarButtonItems = [refreshButton, addLocationButton]
         
+        self.mapView.delegate = self
+        
+        self.loadStudents()
+    }
+    
+    func loadStudents() {
         ParseClient.sharedInstance().getStudents { (success, students, error) -> Void in
             if success {
                 if let students = students {
                     self.students = students
-                    self.studentsLocationsAnnotations()
+                    dispatch_async(dispatch_get_main_queue(), {
+                        self.studentsLocationsAnnotations()
+                        self.mapView.reloadInputViews()
+                    })
+                }
+                else {
+                    self.displayErrorAlertView("Could not get students datas")
                 }
             }
             else {
-                dispatch_async(dispatch_get_main_queue(), {
-                    UIAlertView(title: nil, message: error, delegate: nil, cancelButtonTitle: "OK").show()
-                })
+                if let error = error {
+                    self.displayErrorAlertView(error)
+                }
             }
         }
-
+    }
+    
+    func displayErrorAlertView(error: String) {
+        dispatch_async(dispatch_get_main_queue(), {
+            UIAlertView(title: nil, message: error, delegate: nil, cancelButtonTitle: "OK").show()
+        })
     }
     
     func studentsLocationsAnnotations() {
@@ -63,9 +80,35 @@ class MapViewController: UIViewController {
         }
         
         // When the array is complete, we add the annotations to the map.
-        dispatch_async(dispatch_get_main_queue(), {
-            self.mapView.addAnnotations(annotations)
-        })
+        self.mapView.addAnnotations(annotations)
+    }
+    
+    
+    // Creating a view with a "right callout accessory view".
+    func mapView(mapView: MKMapView!, viewForAnnotation annotation: MKAnnotation!) -> MKAnnotationView! {
+        
+        let reuseId = "pin"
+        
+        var pinView = mapView.dequeueReusableAnnotationViewWithIdentifier(reuseId) as? MKPinAnnotationView
+        
+        if pinView == nil {
+            pinView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: reuseId)
+            pinView!.canShowCallout = true
+            pinView!.pinColor = .Red
+            pinView!.rightCalloutAccessoryView = UIButton.buttonWithType(.DetailDisclosure) as! UIButton
+        }
+        else {
+            pinView!.annotation = annotation
+        }
+        
+        return pinView
+    }
+    
+    func mapView(mapView: MKMapView!, annotationView: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
+        
+        if control == annotationView.rightCalloutAccessoryView {
+            UIApplication.sharedApplication().openURL(NSURL(string: annotationView.annotation.subtitle!)!)
+        }
     }
     
 }

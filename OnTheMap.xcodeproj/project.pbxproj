@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D2BD0761B57B62600093621 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2BD0751B57B62600093621 /* TableViewController.swift */; };
 		0D3168611B4A7FCF00632A66 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D3168601B4A7FCF00632A66 /* LoginViewController.swift */; };
 		0D31687B1B4BCEC600632A66 /* UdacityClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D31687A1B4BCEC600632A66 /* UdacityClient.swift */; };
 		0D3168861B4E767500632A66 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D3168851B4E767500632A66 /* MapViewController.swift */; };
@@ -34,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0D2BD0751B57B62600093621 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		0D3168601B4A7FCF00632A66 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		0D31687A1B4BCEC600632A66 /* UdacityClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UdacityClient.swift; sourceTree = "<group>"; };
 		0D3168851B4E767500632A66 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
@@ -77,6 +79,7 @@
 			children = (
 				0D3168601B4A7FCF00632A66 /* LoginViewController.swift */,
 				0D3168851B4E767500632A66 /* MapViewController.swift */,
+				0D2BD0751B57B62600093621 /* TableViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -291,6 +294,7 @@
 				0D3168881B4E7B0200632A66 /* ParseClient.swift in Sources */,
 				0D31687B1B4BCEC600632A66 /* UdacityClient.swift in Sources */,
 				0D3168611B4A7FCF00632A66 /* LoginViewController.swift in Sources */,
+				0D2BD0761B57B62600093621 /* TableViewController.swift in Sources */,
 				0D58553C1B469AA7000457FF /* FormTextField.swift in Sources */,
 				0D3168861B4E767500632A66 /* MapViewController.swift in Sources */,
 				0D31688B1B4FF8E500632A66 /* Student.swift in Sources */,
@@ -426,7 +430,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "733bcfe7-dc99-4a8b-bc32-236f13d4c54d";
+				PROVISIONING_PROFILE = "a53c9687-f16e-48c2-8cdf-df3c451a3932";
 			};
 			name = Debug;
 		};
@@ -439,7 +443,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "733bcfe7-dc99-4a8b-bc32-236f13d4c54d";
+				PROVISIONING_PROFILE = "a53c9687-f16e-48c2-8cdf-df3c451a3932";
 			};
 			name = Release;
 		};
