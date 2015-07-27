@@ -372,10 +372,10 @@
                                 <exclude reference="YgD-ac-5Qd"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="VwI-bF-0hR"/>
                                 <exclude reference="5Xk-f3-cAH"/>
                                 <exclude reference="U0x-hd-3AX"/>
                                 <exclude reference="stc-mr-cV0"/>
-                                <exclude reference="VwI-bF-0hR"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -383,10 +383,10 @@
                                 <include reference="YgD-ac-5Qd"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="VwI-bF-0hR"/>
                                 <include reference="5Xk-f3-cAH"/>
                                 <include reference="U0x-hd-3AX"/>
                                 <include reference="stc-mr-cV0"/>
-                                <include reference="VwI-bF-0hR"/>
                             </mask>
                         </variation>
                     </view>

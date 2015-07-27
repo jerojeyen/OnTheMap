@@ -12,9 +12,13 @@ class ParseClient {
     
     /* Shared session */
     let session: NSURLSession
+    let applicationId: String
+    let restApiKey: String
     
     init() {
         self.session = NSURLSession.sharedSession()
+        self.applicationId = "QrX47CA9cyuGewLdsL7o5Eb8iug6Em8ye0dnAbIr"
+        self.restApiKey = "QuWThTdiRmTux3YaDseUSEpUKo7aBYM737yKd4gY"
     }
     
     func getStudents(completionHandler: (success: Bool, students: [Student]?, error: String?) -> Void) {
@@ -25,8 +29,8 @@ class ParseClient {
         
         /* Configuring the request */
         let request = NSMutableURLRequest(URL: NSURL(string: "https://api.parse.com/1/classes/StudentLocation" + escapedParameters(methodParameters))!)
-        request.addValue("QrX47CA9cyuGewLdsL7o5Eb8iug6Em8ye0dnAbIr", forHTTPHeaderField: "X-Parse-Application-Id")
-        request.addValue("QuWThTdiRmTux3YaDseUSEpUKo7aBYM737yKd4gY", forHTTPHeaderField: "X-Parse-REST-Api-Key")
+        request.addValue(self.applicationId, forHTTPHeaderField: "X-Parse-Application-Id")
+        request.addValue(self.restApiKey, forHTTPHeaderField: "X-Parse-REST-Api-Key")
         
         /* Making the request */
         let task = self.session.dataTaskWithRequest(request) {data, response, downloadError in
@@ -64,6 +68,42 @@ class ParseClient {
         task.resume()
 
     }
+    
+    func queryingStudentLocation(completionHandler: (success: Bool, error: String?) -> Void) {
+        
+        let userKey = UdacityClient.sharedInstance().userKey
+        
+        /* Configuring the request */
+        let request = NSMutableURLRequest(URL: NSURL(string: "https://api.parse.com/1/classes/StudentLocation?where=%7B%22uniqueKey%22%3A%22\(userKey)%22%7D")!)
+        request.addValue(self.applicationId, forHTTPHeaderField: "X-Parse-Application-Id")
+        request.addValue(self.restApiKey, forHTTPHeaderField: "X-Parse-REST-Api-Key")
+        
+        /* Making the request */
+        let task = session.dataTaskWithRequest(request) { data, response, error in
+            
+            if let error = error {
+                completionHandler(success: false, error: "Could not find student location.")
+            } else {
+                
+                /* Parsing the data */
+                var parsingError: NSError? = nil
+                let parsedResult = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.AllowFragments, error: &parsingError) as! NSDictionary
+                
+                /* Using the data */
+                if let results = parsedResult["results"] as? [[String : AnyObject]] {
+//                    self.objectID = results[0]["objectId"] as! String
+                    completionHandler(success: true, error: nil)
+                }
+                else {
+                    completionHandler(success: false, error: "Could not find student location.")
+                }
+                
+            }
+        }
+        /* Starting the request */
+        task.resume()
+    }
+
     
     /* Helper function: Given a dictionary of parameters, convert to a string for a url */
     func escapedParameters(parameters: [String : AnyObject]) -> String {

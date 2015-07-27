@@ -26,6 +26,10 @@ class TableViewController: UITableViewController {
         self.loadStudents()
     }
     
+    func logout() {
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
     func loadStudents() {
         ParseClient.sharedInstance().getStudents { (success, students, error) -> Void in
             if success {
