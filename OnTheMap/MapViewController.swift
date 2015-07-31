@@ -19,7 +19,7 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         super.viewDidLoad()
         
         //Adding the bar button items of the navigation bar.
-        let addLocationButton = UIBarButtonItem(image: UIImage(named: "pin"), style: UIBarButtonItemStyle.Plain, target: self, action: "checkForStudentLocation")
+        let addLocationButton = UIBarButtonItem(image: UIImage(named: "pin"), style: UIBarButtonItemStyle.Plain, target: self, action: "updateLocation")
         let refreshButton = UIBarButtonItem(barButtonSystemItem: .Refresh, target: self, action: "loadStudents")
         let logoutButton = UIBarButtonItem(title: "Logout", style: .Plain, target: self, action: "logout")
         
@@ -33,6 +33,12 @@ class MapViewController: UIViewController, MKMapViewDelegate {
     
     func logout() {
         self.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    
+    func updateLocation() {
+        let controller = self.storyboard!.instantiateViewControllerWithIdentifier("InformationPostingViewController") as! UIViewController
+        self.presentViewController(controller, animated: true, completion: nil)
     }
     
     func loadStudents() {

@@ -13,6 +13,7 @@
 		0D3168861B4E767500632A66 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D3168851B4E767500632A66 /* MapViewController.swift */; };
 		0D3168881B4E7B0200632A66 /* ParseClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D3168871B4E7B0200632A66 /* ParseClient.swift */; };
 		0D31688B1B4FF8E500632A66 /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D31688A1B4FF8E500632A66 /* Student.swift */; };
+		0D52FB1A1B6A1CDC00C81F11 /* InformationPostingViewcontroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D52FB191B6A1CDC00C81F11 /* InformationPostingViewcontroller.swift */; };
 		0D5855131B467F39000457FF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D5855121B467F39000457FF /* AppDelegate.swift */; };
 		0D5855181B467F39000457FF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D5855161B467F39000457FF /* Main.storyboard */; };
 		0D58551A1B467F39000457FF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0D5855191B467F39000457FF /* Images.xcassets */; };
@@ -22,6 +23,8 @@
 		0D5855381B468DC1000457FF /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0D5855351B468DC1000457FF /* Roboto-Regular.ttf */; };
 		0D5855391B468DC1000457FF /* Roboto-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0D5855361B468DC1000457FF /* Roboto-Thin.ttf */; };
 		0D58553C1B469AA7000457FF /* FormTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D58553B1B469AA7000457FF /* FormTextField.swift */; };
+		0D6A16751B6BA45300BB1B26 /* InformationPostingMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6A16741B6BA45300BB1B26 /* InformationPostingMapViewController.swift */; };
+		0D6A16771B6BB32800BB1B26 /* MyTextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6A16761B6BB32800BB1B26 /* MyTextFieldDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +44,7 @@
 		0D3168851B4E767500632A66 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		0D3168871B4E7B0200632A66 /* ParseClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseClient.swift; sourceTree = "<group>"; };
 		0D31688A1B4FF8E500632A66 /* Student.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
+		0D52FB191B6A1CDC00C81F11 /* InformationPostingViewcontroller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InformationPostingViewcontroller.swift; sourceTree = "<group>"; };
 		0D58550D1B467F39000457FF /* OnTheMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OnTheMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D5855111B467F39000457FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0D5855121B467F39000457FF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -54,6 +58,8 @@
 		0D5855351B468DC1000457FF /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
 		0D5855361B468DC1000457FF /* Roboto-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Thin.ttf"; sourceTree = "<group>"; };
 		0D58553B1B469AA7000457FF /* FormTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormTextField.swift; sourceTree = "<group>"; };
+		0D6A16741B6BA45300BB1B26 /* InformationPostingMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InformationPostingMapViewController.swift; sourceTree = "<group>"; };
+		0D6A16761B6BB32800BB1B26 /* MyTextFieldDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyTextFieldDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,9 +83,12 @@
 		0D31685F1B4A7F8D00632A66 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				0D6A16761B6BB32800BB1B26 /* MyTextFieldDelegate.swift */,
 				0D3168601B4A7FCF00632A66 /* LoginViewController.swift */,
 				0D3168851B4E767500632A66 /* MapViewController.swift */,
 				0D2BD0751B57B62600093621 /* TableViewController.swift */,
+				0D52FB191B6A1CDC00C81F11 /* InformationPostingViewcontroller.swift */,
+				0D6A16741B6BA45300BB1B26 /* InformationPostingMapViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -294,11 +303,14 @@
 				0D3168881B4E7B0200632A66 /* ParseClient.swift in Sources */,
 				0D31687B1B4BCEC600632A66 /* UdacityClient.swift in Sources */,
 				0D3168611B4A7FCF00632A66 /* LoginViewController.swift in Sources */,
+				0D6A16751B6BA45300BB1B26 /* InformationPostingMapViewController.swift in Sources */,
 				0D2BD0761B57B62600093621 /* TableViewController.swift in Sources */,
 				0D58553C1B469AA7000457FF /* FormTextField.swift in Sources */,
 				0D3168861B4E767500632A66 /* MapViewController.swift in Sources */,
 				0D31688B1B4FF8E500632A66 /* Student.swift in Sources */,
 				0D5855131B467F39000457FF /* AppDelegate.swift in Sources */,
+				0D52FB1A1B6A1CDC00C81F11 /* InformationPostingViewcontroller.swift in Sources */,
+				0D6A16771B6BB32800BB1B26 /* MyTextFieldDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class LoginViewController: UIViewController, UITextFieldDelegate {
+class LoginViewController: UIViewController {
 
     @IBOutlet weak var usernameTextField: FormTextField!
     @IBOutlet weak var passwordTextField: FormTextField!
@@ -20,8 +20,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        usernameTextField.delegate = self
-        passwordTextField.delegate = self
+        usernameTextField.delegate = MyTextfieldDelegate()
+        passwordTextField.delegate = MyTextfieldDelegate()
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -60,12 +60,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         let signUpUrl = "https://www.google.com/url?q=https%3A%2F%2Fwww.udacity.com%2Faccount%2Fauth%23!%2Fsignin&sa=D&sntz=1&usg=AFQjCNERmggdSkRb9MFkqAW_5FgChiCxAQ"
         UIApplication.sharedApplication().openURL(NSURL(string: signUpUrl)!)
     }
-    
-    func textFieldShouldReturn(textField: UITextField) -> Bool {
-        self.view.endEditing(true)
-        return false
-    }
-    
+
     func subscribeToKeyboardNotifications() {
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillShow:", name: UIKeyboardWillShowNotification, object: nil)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillHide:", name: UIKeyboardWillHideNotification, object: nil)
