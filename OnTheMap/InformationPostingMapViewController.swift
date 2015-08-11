@@ -41,6 +41,10 @@ class InformationPostingMapViewController: UIViewController {
     }
     
     @IBAction func submitPressed(sender: AnyObject) {
-
+        if linkTextField.text.isEmpty {
+            UIAlertView(title: nil, message: "The link field is empty", delegate: nil, cancelButtonTitle: "OK").show()
+        } else {
+            
+        }
     }
 }

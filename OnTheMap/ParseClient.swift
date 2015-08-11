@@ -12,8 +12,11 @@ class ParseClient {
     
     /* Shared session */
     let session: NSURLSession
+    
     let applicationId: String
     let restApiKey: String
+    
+    var objectID: String!
     
     init() {
         self.session = NSURLSession.sharedSession()
@@ -91,7 +94,7 @@ class ParseClient {
                 
                 /* Using the data */
                 if let results = parsedResult["results"] as? [[String : AnyObject]] {
-//                    self.objectID = results[0]["objectId"] as! String
+                    self.objectID = results[0]["objectId"] as! String
                     completionHandler(success: true, error: nil)
                 }
                 else {

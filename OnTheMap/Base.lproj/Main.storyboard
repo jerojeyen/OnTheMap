@@ -487,7 +487,7 @@
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nvc-51-jaW">
                                         <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                        <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803926" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="140" id="AzY-gs-mBP"/>
                                             <constraint firstAttribute="height" constant="30" id="ZN5-8R-0DA"/>
@@ -660,6 +660,7 @@
                         <viewControllerLayoutGuide type="bottom" id="ISp-s4-Tan"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="ZGw-JB-CX5">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Iah-dG-JWg">
@@ -740,7 +741,7 @@
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iw3-DJ-6ZE">
                                         <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                        <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803926" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="140" id="NwD-zE-fol"/>
                                             <constraint firstAttribute="height" constant="30" id="jXc-qI-9rj"/>
@@ -813,16 +814,16 @@
                                 <exclude reference="igE-kx-HME"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="QRS-os-8iq"/>
-                                <exclude reference="d7n-Db-8d2"/>
-                                <exclude reference="oco-8P-WqE"/>
+                                <exclude reference="Pkm-MN-Dwd"/>
+                                <exclude reference="S5M-cn-oUm"/>
                                 <exclude reference="FiL-As-MAR"/>
                                 <exclude reference="p34-OA-AOR"/>
                                 <exclude reference="z1B-GX-f2U"/>
+                                <exclude reference="QRS-os-8iq"/>
+                                <exclude reference="d7n-Db-8d2"/>
+                                <exclude reference="oco-8P-WqE"/>
                                 <exclude reference="2GK-Uv-06p"/>
                                 <exclude reference="lWL-LG-Jn8"/>
-                                <exclude reference="Pkm-MN-Dwd"/>
-                                <exclude reference="S5M-cn-oUm"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -832,16 +833,16 @@
                                 <include reference="igE-kx-HME"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="QRS-os-8iq"/>
-                                <include reference="d7n-Db-8d2"/>
-                                <include reference="oco-8P-WqE"/>
+                                <include reference="Pkm-MN-Dwd"/>
+                                <include reference="S5M-cn-oUm"/>
                                 <include reference="FiL-As-MAR"/>
                                 <include reference="p34-OA-AOR"/>
                                 <include reference="z1B-GX-f2U"/>
+                                <include reference="QRS-os-8iq"/>
+                                <include reference="d7n-Db-8d2"/>
+                                <include reference="oco-8P-WqE"/>
                                 <include reference="2GK-Uv-06p"/>
                                 <include reference="lWL-LG-Jn8"/>
-                                <include reference="Pkm-MN-Dwd"/>
-                                <include reference="S5M-cn-oUm"/>
                             </mask>
                         </variation>
                     </view>

@@ -101,6 +101,7 @@ class InformationPostingViewController: UIViewController {
             vc.region = region
             vc.latitude = latitude
             vc.longitude = longitude
+            vc.placemark = placemark
         }
     }
 }
